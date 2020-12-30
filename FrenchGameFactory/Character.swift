@@ -8,13 +8,15 @@
 import Foundation
 
 class Character {
-    var name: String
+    let type: String
+    let name: String
     var life: Int
-    var hit: Int
-    // var weapon: Weapon
+    var weapon: Weapon
     
-    init(name: String, life: Int) {
+    init(type: String, name: String, weapon: Weapon, life: Int) {
+        self.type = type
         self.name = name
+        self.weapon = weapon
         self.life = life
     }
     
@@ -27,10 +29,7 @@ class Character {
     //func dgt
 }
 
-class Gunner: Character {
-    //gunner.life = 90
-    //gunner.hit = 80
-}
+
 
 class Engineer: Character {
     //life = 50

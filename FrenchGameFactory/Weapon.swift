@@ -8,16 +8,16 @@
 import Foundation
 
 class Weapon {
-    let category: String
-    var hit: Int
-    var heal: Int
+    let name: String
+    var damage: Int
     
     //func eneleve vie
     
     //func ajoute vie
     
-    init(category: String) {
-        self.category = category
+    init(name: String, damage: Int) {
+        self.name = name
+        self.damage = damage
     }
     
 }
@@ -40,9 +40,3 @@ class Encyclopedia: Weapon {
     //func martialArt : func enleveVie = hit
 }
 
-class Gun: Weapon {
-    //category = gun
-    // hit = 80 degat
-    
-    //func headShoot : func enleveVie = hit
-}

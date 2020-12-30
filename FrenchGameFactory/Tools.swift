@@ -96,4 +96,3 @@ class Tools {
      determine une chance d'octroyé un des trois type d'arme bonus au joueur selectionner
      */
     
-}

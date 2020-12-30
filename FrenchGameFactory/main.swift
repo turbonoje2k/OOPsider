@@ -11,8 +11,8 @@ let tool = Tools()
 //tool.getInputString()
 //tool.getInputInt()
 
-let monPerso = Character(name: "perso1", life: 30)
-print("Bonjour, je suis \(monPerso.name)"," j'ai \(monPerso.life)")
+var monPerso = Gunner(name: "hero")
+print("Bonjour, je suis \(monPerso.name)"," j'ai \(monPerso.life)", "j'ai un \(monPerso.weapon.name) avec \(monPerso.weapon.damage) de degat")
 
-var myWeapon = Weapon(category: "bow")
+//var myWeapon = Weapon(category: "bow")
 
