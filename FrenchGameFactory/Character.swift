@@ -28,8 +28,8 @@ class Character {
 }
 
 class Gunner: Character {
-//    gunner.life = 90
-//    gunner.hit = 80
+    //gunner.life = 90
+    //gunner.hit = 80
 }
 
 class Engineer: Character {
