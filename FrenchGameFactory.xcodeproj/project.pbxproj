@@ -10,7 +10,15 @@
 		DC764DD025911F2900537185 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC764DCF25911F2900537185 /* main.swift */; };
 		DC764DD825911F5C00537185 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC764DD725911F5C00537185 /* Tools.swift */; };
 		DC764DDB2591247F00537185 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC764DDA2591247F00537185 /* Character.swift */; };
+		DCDC627A259CC602002B6D0C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDC6279259CC602002B6D0C /* Player.swift */; };
+		DCDD98FE259D23AF00749E7F /* Medic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD98FD259D23AF00749E7F /* Medic.swift */; };
+		DCDD9901259D244E00749E7F /* Engineer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD9900259D244E00749E7F /* Engineer.swift */; };
+		DCDD9904259D248A00749E7F /* Hitman.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD9903259D248A00749E7F /* Hitman.swift */; };
+		DCDD9907259D24E200749E7F /* Bow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD9906259D24E200749E7F /* Bow.swift */; };
+		DCDD990A259D250F00749E7F /* Encyclopedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD9909259D250F00749E7F /* Encyclopedia.swift */; };
 		DCECA8B3259C72AC0011BA79 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCECA8B2259C72AC0011BA79 /* Weapon.swift */; };
+		DCECA8B6259CBE610011BA79 /* Gunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCECA8B5259CBE610011BA79 /* Gunner.swift */; };
+		DCECA8B9259CC1140011BA79 /* Gun.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCECA8B8259CC1140011BA79 /* Gun.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +38,15 @@
 		DC764DCF25911F2900537185 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DC764DD725911F5C00537185 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		DC764DDA2591247F00537185 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		DCDC6279259CC602002B6D0C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		DCDD98FD259D23AF00749E7F /* Medic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medic.swift; sourceTree = "<group>"; };
+		DCDD9900259D244E00749E7F /* Engineer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engineer.swift; sourceTree = "<group>"; };
+		DCDD9903259D248A00749E7F /* Hitman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hitman.swift; sourceTree = "<group>"; };
+		DCDD9906259D24E200749E7F /* Bow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bow.swift; sourceTree = "<group>"; };
+		DCDD9909259D250F00749E7F /* Encyclopedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encyclopedia.swift; sourceTree = "<group>"; };
 		DCECA8B2259C72AC0011BA79 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		DCECA8B5259CBE610011BA79 /* Gunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gunner.swift; sourceTree = "<group>"; };
+		DCECA8B8259CC1140011BA79 /* Gun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gun.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +79,36 @@
 		DC764DCE25911F2900537185 /* FrenchGameFactory */ = {
 			isa = PBXGroup;
 			children = (
+				DCDC6277259CC58C002B6D0C /* Characters */,
+				DCECA8BB259CC1880011BA79 /* Weapons */,
 				DC764DCF25911F2900537185 /* main.swift */,
 				DC764DD725911F5C00537185 /* Tools.swift */,
+				DCDC6279259CC602002B6D0C /* Player.swift */,
 				DC764DDA2591247F00537185 /* Character.swift */,
 				DCECA8B2259C72AC0011BA79 /* Weapon.swift */,
 			);
 			path = FrenchGameFactory;
+			sourceTree = "<group>";
+		};
+		DCDC6277259CC58C002B6D0C /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				DCECA8B5259CBE610011BA79 /* Gunner.swift */,
+				DCDD98FD259D23AF00749E7F /* Medic.swift */,
+				DCDD9900259D244E00749E7F /* Engineer.swift */,
+				DCDD9903259D248A00749E7F /* Hitman.swift */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		DCECA8BB259CC1880011BA79 /* Weapons */ = {
+			isa = PBXGroup;
+			children = (
+				DCECA8B8259CC1140011BA79 /* Gun.swift */,
+				DCDD9906259D24E200749E7F /* Bow.swift */,
+				DCDD9909259D250F00749E7F /* Encyclopedia.swift */,
+			);
+			path = Weapons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +168,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDD9901259D244E00749E7F /* Engineer.swift in Sources */,
+				DCDD98FE259D23AF00749E7F /* Medic.swift in Sources */,
 				DC764DDB2591247F00537185 /* Character.swift in Sources */,
 				DCECA8B3259C72AC0011BA79 /* Weapon.swift in Sources */,
+				DCECA8B6259CBE610011BA79 /* Gunner.swift in Sources */,
 				DC764DD025911F2900537185 /* main.swift in Sources */,
+				DCDD9904259D248A00749E7F /* Hitman.swift in Sources */,
+				DCDD9907259D24E200749E7F /* Bow.swift in Sources */,
+				DCDC627A259CC602002B6D0C /* Player.swift in Sources */,
+				DCDD990A259D250F00749E7F /* Encyclopedia.swift in Sources */,
+				DCECA8B9259CC1140011BA79 /* Gun.swift in Sources */,
 				DC764DD825911F5C00537185 /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
