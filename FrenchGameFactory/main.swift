@@ -14,5 +14,5 @@ let tool = Tools()
 let monPerso = Character(name: "perso1", life: 30)
 print("Bonjour, je suis \(monPerso.name)"," j'ai \(monPerso.life)")
 
-var myWeapon = Weapon(category: String)
+var myWeapon = Weapon(category: "bow")
 
