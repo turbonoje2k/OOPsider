@@ -16,10 +16,8 @@ class Weapon {
     
     //func ajoute vie
     
-    init(category: String, hit: Int, heal: Int) {
+    init(category: String) {
         self.category = category
-        self.hit = hit
-        self.heal = heal
     }
     
 }
@@ -28,16 +26,23 @@ class Bow: Weapon {
     //category = bow
     // hit = 80 degat
     //heal = 50 life
+    
+    //func ArrowSupport : func ajouteVie = heal
+    //func ArrowShoot : func enleveVie = hit
 }
 
 class Encyclopedia: Weapon {
     //category = encyclopedia
     // hit = 50 degat
     //heal = 70 life
+    
+    //func Anatomie : func ajouteVie = heal
+    //func martialArt : func enleveVie = hit
 }
 
 class Gun: Weapon {
     //category = gun
     // hit = 80 degat
-    //heal = 80 life
+    
+    //func headShoot : func enleveVie = hit
 }
