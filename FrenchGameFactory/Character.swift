@@ -28,21 +28,3 @@ class Character {
     
     //func dgt
 }
-
-
-
-class Engineer: Character {
-    //life = 50
-    //hit = 90
-}
-
-class Hitman: Character {
-    //life = 100
-    //hit = 50
-    //heal = 50
-}
-
-class Medic: Character {
-    //life = 100
-    //heal = 70
-}
