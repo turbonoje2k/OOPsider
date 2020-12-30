@@ -46,12 +46,29 @@ class Tools {
         ( 3 * func creer un guss)
      */
     
+    func NameYourGuss(name: String) {
+        print("please type the name of your Guss")
+        
+        //if let name = readLine() {
+            
+        }
+    }
+    
     //func creer un guss
         /**
         le joueur choisit un perso parmis 4 dispo
         une fois perso choisit on le nomme ( un pseudo unique)
         appel func verifier pseudo
      */
+    func createGuss() {
+        print("Choose your Guss"
+            + "\n1. 🥷 Hitman"
+            + "\n2. 💂‍♀️ Gunner"
+            + "\n3. 👷‍♂️ Engineer"
+            + "\n4. 🧑‍⚕️ Medic")
+    }
+    
+    //
     
     //func verifier nom pseudo
         /**
