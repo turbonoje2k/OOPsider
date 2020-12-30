@@ -47,7 +47,3 @@ class Medic: Character {
     //life = 100
     //heal = 70
 }
-
-
-
-
