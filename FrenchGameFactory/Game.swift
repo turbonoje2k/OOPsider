@@ -54,7 +54,7 @@ class Game {
     // remplir array perso ac name(unique)
     // une fois array full init Player(arrayCharacter)
     func buildTeam() {
-        print("choose you teammate")
+        print("name the teammate")
         //var choiceCharater: [Character] = [Character]()
         
         //repeat chooseTeam()
