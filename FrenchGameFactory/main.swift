@@ -19,3 +19,8 @@ let characterArray = [monPerso, monPerso2, monPerso3]
 var Player1 = Player(character: characterArray)
 
 Player1.printInLiveCharacter()
+
+
+let game = Game()
+print(game.chooseTeam(nameTeam: "toto").weapon.damage)
+

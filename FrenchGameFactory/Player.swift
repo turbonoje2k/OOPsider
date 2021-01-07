@@ -12,10 +12,11 @@ class Player {
     var characterDead: [Character] = [Character]()
     var numberOfCharacterDies: Int = 0
     
-    init (character: [Character]) {
+    init(character: [Character]) {
         //utilise un foreach pour remplir character vivant
-        characterInLife.forEach { character in
-            print(character)
+        print("yo")
+        print(character[0])
+        character.forEach { (character) in
             characterInLife.append(character)
         }
         
@@ -23,7 +24,7 @@ class Player {
     
     func printInLiveCharacter() {
         characterInLife.enumerated().forEach { (index, character) in
-            print("\(index + 1): \(character.name) (\(character.type) \(character.life) HP - (\(character.weapon.damage) WP") 
+            print("\(index + 1): \(character.name) (\(character.type) \(character.life) HP - (\(character.weapon.damage) WP)") 
         }
     }
 }
