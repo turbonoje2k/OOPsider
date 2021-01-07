@@ -12,7 +12,10 @@ let tool = Tools()
 //tool.getInputInt()
 
 var monPerso = Gunner(name: "hero")
-print("Bonjour, je suis \(monPerso.name)"," j'ai \(monPerso.life)", "j'ai un \(monPerso.weapon.name) avec \(monPerso.weapon.damage) de degat")
+var monPerso2 = Hitman(name: "rob")
+var monPerso3 = Medic(name: "doc")
 
-//var myWeapon = Weapon(category: "bow")
+let characterArray = [monPerso, monPerso2, monPerso3]
+var Player1 = Player(character: characterArray)
 
+Player1.printInLiveCharacter()
