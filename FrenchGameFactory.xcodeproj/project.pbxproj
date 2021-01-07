@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC4C9F0725A71EAC00EC643C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C9F0625A71EAC00EC643C /* Game.swift */; };
+		DC4C9F0A25A7395D00EC643C /* Hammer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C9F0925A7395D00EC643C /* Hammer.swift */; };
 		DC764DD025911F2900537185 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC764DCF25911F2900537185 /* main.swift */; };
 		DC764DD825911F5C00537185 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC764DD725911F5C00537185 /* Tools.swift */; };
 		DC764DDB2591247F00537185 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC764DDA2591247F00537185 /* Character.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DC4C9F0625A71EAC00EC643C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		DC4C9F0925A7395D00EC643C /* Hammer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hammer.swift; sourceTree = "<group>"; };
 		DC764DCC25911F2900537185 /* FrenchGameFactory */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FrenchGameFactory; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC764DCF25911F2900537185 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DC764DD725911F5C00537185 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 				DCDC6277259CC58C002B6D0C /* Characters */,
 				DCECA8BB259CC1880011BA79 /* Weapons */,
 				DC764DCF25911F2900537185 /* main.swift */,
+				DC4C9F0625A71EAC00EC643C /* Game.swift */,
 				DC764DD725911F5C00537185 /* Tools.swift */,
 				DCDC6279259CC602002B6D0C /* Player.swift */,
 				DC764DDA2591247F00537185 /* Character.swift */,
@@ -107,6 +112,7 @@
 				DCECA8B8259CC1140011BA79 /* Gun.swift */,
 				DCDD9906259D24E200749E7F /* Bow.swift */,
 				DCDD9909259D250F00749E7F /* Encyclopedia.swift */,
+				DC4C9F0925A7395D00EC643C /* Hammer.swift */,
 			);
 			path = Weapons;
 			sourceTree = "<group>";
@@ -171,6 +177,7 @@
 				DCDD9901259D244E00749E7F /* Engineer.swift in Sources */,
 				DCDD98FE259D23AF00749E7F /* Medic.swift in Sources */,
 				DC764DDB2591247F00537185 /* Character.swift in Sources */,
+				DC4C9F0725A71EAC00EC643C /* Game.swift in Sources */,
 				DCECA8B3259C72AC0011BA79 /* Weapon.swift in Sources */,
 				DCECA8B6259CBE610011BA79 /* Gunner.swift in Sources */,
 				DC764DD025911F2900537185 /* main.swift in Sources */,
@@ -178,6 +185,7 @@
 				DCDD9907259D24E200749E7F /* Bow.swift in Sources */,
 				DCDC627A259CC602002B6D0C /* Player.swift in Sources */,
 				DCDD990A259D250F00749E7F /* Encyclopedia.swift in Sources */,
+				DC4C9F0A25A7395D00EC643C /* Hammer.swift in Sources */,
 				DCECA8B9259CC1140011BA79 /* Gun.swift in Sources */,
 				DC764DD825911F5C00537185 /* Tools.swift in Sources */,
 			);

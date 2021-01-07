@@ -9,6 +9,6 @@ import Foundation
 
 class Encyclopedia: Weapon {
     init() {
-        super.init(name: "Encyclopedia", damage: 50)
+        super.init(name: "Encyclopedia", damage: -80)
     }
 }

@@ -9,6 +9,8 @@ import Foundation
 
 class Tools {
     
+    static let shared = Tools()
+    
     //func pour recuperer les input taper dans console
     func getInputString() -> String {
         print("enter a name")

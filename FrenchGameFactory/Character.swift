@@ -8,11 +8,13 @@
 import Foundation
 
 class Character {
+    //chaque guss partagent des attributs
     let type: String
     let name: String
     var life: Int
     var weapon: Weapon
     
+    //on init nos objet avec ces parametres
     init(type: String, name: String, weapon: Weapon, life: Int) {
         self.type = type
         self.name = name

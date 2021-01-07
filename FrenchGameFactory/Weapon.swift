@@ -8,35 +8,13 @@
 import Foundation
 
 class Weapon {
+    //les arme heritent de la classe weapon
     let name: String
     var damage: Int
     
-    //func eneleve vie
-    
-    //func ajoute vie
-    
+    //elles ont besoin de parametre pour etre initier
     init(name: String, damage: Int) {
         self.name = name
         self.damage = damage
     }
-    
 }
-
-class Bow: Weapon {
-    //category = bow
-    // hit = 80 degat
-    //heal = 50 life
-    
-    //func ArrowSupport : func ajouteVie = heal
-    //func ArrowShoot : func enleveVie = hit
-}
-
-class Encyclopedia: Weapon {
-    //category = encyclopedia
-    // hit = 50 degat
-    //heal = 70 life
-    
-    //func Anatomie : func ajouteVie = heal
-    //func martialArt : func enleveVie = hit
-}
-
