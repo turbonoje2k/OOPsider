@@ -16,9 +16,9 @@ class Game {
     
     func chooseTeam(nameTeam: String) -> Character {
         
-        print("choose Your character" + "\n1. The gunner is 80 life he has a gun, make 80 damage" + "\n2. The Medic is 70 life he has a encyclopedia, make 80 damage" + "\n3. The hitman is 50 life he has a gun, make 80 damage" + "\n4. The engineer is 90 life he has a gun, make 80 damage")
+        print("choose Your character" + "\n1. 💂‍♀️ The gunner is 80 life he has a gun 🔫, make 80 damage" + "\n2. 🧑‍⚕️ The Medic is 70 life he has a encyclopedia📘, make 80 damage" + "\n3. 🥷 The hitman is 50 life he has a bow 🏹, make 50 damage" + "\n4. 👷‍♂️ The engineer is 90 life he has a hammer 🔨, make 60 damage")
         var teamNumber = 0
-        print("choose Team")
+        print("choose a character")
         repeat {
             let team = Tools.shared.getInputInt()
             switch team {
@@ -59,7 +59,7 @@ class Game {
         
         //repeat chooseTeam()
         
-        //while characterArray = 3
+        //while teamNumber = 3
     }
 }
 
