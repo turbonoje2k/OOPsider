@@ -53,13 +53,15 @@ class Game {
     //func qui va creer 3 perso.count = 3
     // remplir array perso ac name(unique)
     // une fois array full init Player(arrayCharacter)
-//    func buildTeam() {
-//        
-//        var choiceCharater: [Character] = [Character]()
-//        
-//        repeat {
-//            print("remplir array")
-//        } while [Character].count = 3
-//    }
+    func buildTeam() {
+        
+        var arrayOfCharacter: [Character] = [Character]()
+        
+        repeat {
+            arrayOfCharacter.append(chooseTeam(nameTeamMate: <#T##String#>))
+        } while arrayOfCharacter.count <= 3
+        print("your team = \(arrayOfCharacter)")
+        
+   }
 }
 
