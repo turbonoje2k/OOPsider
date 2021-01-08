@@ -22,5 +22,5 @@ Player1.printInLiveCharacter()
 
 
 let game = Game()
-print(game.chooseTeam(nameTeam: "toto").weapon.damage)
+/**print(game.chooseTeam(nameTeamMate: <#T##String#>).weapon.damage)**/
 
