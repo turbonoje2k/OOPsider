@@ -53,20 +53,6 @@ class Game {
 
     }
     
-    
-    //func creat 3 character with name
-    // append array with character
-    // when array full init Player(arrayCharacter)
-//    func buildTeam() {
-//
-//        var arrayOfCharacter: [Character] = [Character]()
-//
-//        repeat {
-//            arrayOfCharacter.append(chooseTeam(nameTeamMate: String))
-//        } while arrayOfCharacter.count <= 3
-//        print("your team = \(arrayOfCharacter)")
-//
-//   }
     func buildTeam() {
         var arrayOfNames: [String] = [String]()
         var arrayOfCharacter: [Character] = [Character]()
@@ -90,7 +76,6 @@ class Game {
         
         let PlayerOne = Player(character: arrayOfCharacter)
         print(PlayerOne.printInLiveCharacter())
-        
     }
     
 }
