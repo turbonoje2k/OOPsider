@@ -11,7 +11,7 @@ class Tools {
     
     static let shared = Tools()
     
-    //func pour recuperer les input taper dans console
+    //func get string in terminal
     func getInputString() -> String {
         print("enter a name")
         //on invite à saisir un nom en l'occurrence
