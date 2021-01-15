@@ -14,20 +14,19 @@ class Tools {
     //func get string in terminal
     func getInputString() -> String {
         print("enter a name")
-        //on invite à saisir un nom en l'occurrence
         let str = readLine()
-        //readLine va lire les sttring encapsulé dans la variable str
+        //readLine create a var str, with string
         guard let name = str else {
-        //grace au guard let on verifie la saisie
+        //check if is String with guard let
             return "error: enter character name"
             //Si saisie n'est pas de type string
         }
         print("Hello, \(name)!")
         return name
-        //saisie correct
+    
     }
     
-    //func recup Int taper dans console
+    //func get Int in terminal
     func getInputInt() -> Int {
         print("enter number ")
         let str =  readLine()
