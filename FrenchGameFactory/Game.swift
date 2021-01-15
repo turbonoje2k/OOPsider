@@ -57,15 +57,41 @@ class Game {
     //func creat 3 character with name
     // append array with character
     // when array full init Player(arrayCharacter)
+//    func buildTeam() {
+//
+//        var arrayOfCharacter: [Character] = [Character]()
+//
+//        repeat {
+//            arrayOfCharacter.append(chooseTeam(nameTeamMate: String))
+//        } while arrayOfCharacter.count <= 3
+//        print("your team = \(arrayOfCharacter)")
+//
+//   }
     func buildTeam() {
-        
+        var arrayOfNames: [String] = [String]()
         var arrayOfCharacter: [Character] = [Character]()
         
         repeat {
-            arrayOfCharacter.append(chooseTeam(nameTeamMate: String))
-        } while arrayOfCharacter.count <= 3
-        print("your team = \(arrayOfCharacter)")
+            print("\n Player 1 -> Choose Name of your Characters \(arrayOfCharacter.count+1) : ")
+            var check: Bool = false
+            
+            repeat {
+                let name = Tools.shared.getInputString()
+                if !arrayOfNames.contains(name) {
+                    check = true
+                    arrayOfCharacter.append(chooseTeam(nameTeamMate: name))
+                    arrayOfNames.append(name)
+                } else {
+                    print("\(name) is already taken")
+                }
+            } while check == false
+        } while arrayOfCharacter.count != 3
+        print(arrayOfCharacter[0].type, arrayOfNames[0], arrayOfCharacter[1].type, arrayOfNames[1], arrayOfCharacter[2].type, arrayOfNames[2])
         
-   }
+        let PlayerOne = Player(character: arrayOfCharacter)
+        print(PlayerOne.printInLiveCharacter())
+        
+    }
+    
 }
 

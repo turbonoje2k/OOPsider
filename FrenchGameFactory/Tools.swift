@@ -31,13 +31,11 @@ class Tools {
         print("enter number ")
         let str =  readLine()
         
-        guard let strData = str/*, let strDataInt = Int(strData)*/ else {
+        guard let strData = str, let strDataInt = Int(strData) else {
             
             return -1
         }
-        let myInt = Int(strData)
-        //print(myInt)
-        return myInt!
+       return strDataInt
     
     }
     
