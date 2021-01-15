@@ -8,11 +8,11 @@
 import Foundation
 
 class Weapon {
-    //les arme heritent de la classe weapon
+    
     let name: String
     var damage: Int
     
-    //elles ont besoin de parametre pour etre initier
+    //need param to init
     init(name: String, damage: Int) {
         self.name = name
         self.damage = damage

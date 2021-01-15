@@ -13,7 +13,7 @@ class Player {
     var numberOfCharacterDies: Int = 0
     
     init(character: [Character]) {
-        //utilise un foreach pour remplir character vivant
+        //use foreach to append array of character in life
         print("yo")
         print(character[0])
         character.forEach { (character) in
