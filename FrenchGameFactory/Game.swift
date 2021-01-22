@@ -9,6 +9,8 @@ import Foundation
 
 class Game {
     
+    static let shared = Game()
+    
     func intro()    {
         print("welcome to OOPSIDER")
     }
