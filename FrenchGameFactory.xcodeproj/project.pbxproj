@@ -1,0 +1,354 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC4C9F0725A71EAC00EC643C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C9F0625A71EAC00EC643C /* Game.swift */; };
+		DC4C9F0A25A7395D00EC643C /* Hammer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C9F0925A7395D00EC643C /* Hammer.swift */; };
+		DC764DD025911F2900537185 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC764DCF25911F2900537185 /* main.swift */; };
+		DC764DD825911F5C00537185 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC764DD725911F5C00537185 /* Tools.swift */; };
+		DC764DDB2591247F00537185 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC764DDA2591247F00537185 /* Character.swift */; };
+		DCDC627A259CC602002B6D0C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDC6279259CC602002B6D0C /* Player.swift */; };
+		DCDD98FE259D23AF00749E7F /* Medic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD98FD259D23AF00749E7F /* Medic.swift */; };
+		DCDD9901259D244E00749E7F /* Engineer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD9900259D244E00749E7F /* Engineer.swift */; };
+		DCDD9904259D248A00749E7F /* Hitman.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD9903259D248A00749E7F /* Hitman.swift */; };
+		DCDD9907259D24E200749E7F /* Bow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD9906259D24E200749E7F /* Bow.swift */; };
+		DCDD990A259D250F00749E7F /* Encyclopedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD9909259D250F00749E7F /* Encyclopedia.swift */; };
+		DCECA8B3259C72AC0011BA79 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCECA8B2259C72AC0011BA79 /* Weapon.swift */; };
+		DCECA8B6259CBE610011BA79 /* Gunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCECA8B5259CBE610011BA79 /* Gunner.swift */; };
+		DCECA8B9259CC1140011BA79 /* Gun.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCECA8B8259CC1140011BA79 /* Gun.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DC764DCA25911F2900537185 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DC4C9F0625A71EAC00EC643C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		DC4C9F0925A7395D00EC643C /* Hammer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hammer.swift; sourceTree = "<group>"; };
+		DC764DCC25911F2900537185 /* FrenchGameFactory */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FrenchGameFactory; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC764DCF25911F2900537185 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		DC764DD725911F5C00537185 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		DC764DDA2591247F00537185 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		DCDC6279259CC602002B6D0C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		DCDD98FD259D23AF00749E7F /* Medic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medic.swift; sourceTree = "<group>"; };
+		DCDD9900259D244E00749E7F /* Engineer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engineer.swift; sourceTree = "<group>"; };
+		DCDD9903259D248A00749E7F /* Hitman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hitman.swift; sourceTree = "<group>"; };
+		DCDD9906259D24E200749E7F /* Bow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bow.swift; sourceTree = "<group>"; };
+		DCDD9909259D250F00749E7F /* Encyclopedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encyclopedia.swift; sourceTree = "<group>"; };
+		DCECA8B2259C72AC0011BA79 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		DCECA8B5259CBE610011BA79 /* Gunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gunner.swift; sourceTree = "<group>"; };
+		DCECA8B8259CC1140011BA79 /* Gun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gun.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC764DC925911F2900537185 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC764DC325911F2900537185 = {
+			isa = PBXGroup;
+			children = (
+				DC764DCE25911F2900537185 /* FrenchGameFactory */,
+				DC764DCD25911F2900537185 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC764DCD25911F2900537185 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC764DCC25911F2900537185 /* FrenchGameFactory */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC764DCE25911F2900537185 /* FrenchGameFactory */ = {
+			isa = PBXGroup;
+			children = (
+				DCDC6277259CC58C002B6D0C /* Characters */,
+				DCECA8BB259CC1880011BA79 /* Weapons */,
+				DC764DCF25911F2900537185 /* main.swift */,
+				DC4C9F0625A71EAC00EC643C /* Game.swift */,
+				DC764DD725911F5C00537185 /* Tools.swift */,
+				DCDC6279259CC602002B6D0C /* Player.swift */,
+				DC764DDA2591247F00537185 /* Character.swift */,
+				DCECA8B2259C72AC0011BA79 /* Weapon.swift */,
+			);
+			path = FrenchGameFactory;
+			sourceTree = "<group>";
+		};
+		DCDC6277259CC58C002B6D0C /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				DCECA8B5259CBE610011BA79 /* Gunner.swift */,
+				DCDD98FD259D23AF00749E7F /* Medic.swift */,
+				DCDD9900259D244E00749E7F /* Engineer.swift */,
+				DCDD9903259D248A00749E7F /* Hitman.swift */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		DCECA8BB259CC1880011BA79 /* Weapons */ = {
+			isa = PBXGroup;
+			children = (
+				DCECA8B8259CC1140011BA79 /* Gun.swift */,
+				DCDD9906259D24E200749E7F /* Bow.swift */,
+				DCDD9909259D250F00749E7F /* Encyclopedia.swift */,
+				DC4C9F0925A7395D00EC643C /* Hammer.swift */,
+			);
+			path = Weapons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC764DCB25911F2900537185 /* FrenchGameFactory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC764DD325911F2900537185 /* Build configuration list for PBXNativeTarget "FrenchGameFactory" */;
+			buildPhases = (
+				DC764DC825911F2900537185 /* Sources */,
+				DC764DC925911F2900537185 /* Frameworks */,
+				DC764DCA25911F2900537185 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FrenchGameFactory;
+			productName = FrenchGameFactory;
+			productReference = DC764DCC25911F2900537185 /* FrenchGameFactory */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC764DC425911F2900537185 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					DC764DCB25911F2900537185 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = DC764DC725911F2900537185 /* Build configuration list for PBXProject "FrenchGameFactory" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC764DC325911F2900537185;
+			productRefGroup = DC764DCD25911F2900537185 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC764DCB25911F2900537185 /* FrenchGameFactory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC764DC825911F2900537185 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCDD9901259D244E00749E7F /* Engineer.swift in Sources */,
+				DCDD98FE259D23AF00749E7F /* Medic.swift in Sources */,
+				DC764DDB2591247F00537185 /* Character.swift in Sources */,
+				DC4C9F0725A71EAC00EC643C /* Game.swift in Sources */,
+				DCECA8B3259C72AC0011BA79 /* Weapon.swift in Sources */,
+				DCECA8B6259CBE610011BA79 /* Gunner.swift in Sources */,
+				DC764DD025911F2900537185 /* main.swift in Sources */,
+				DCDD9904259D248A00749E7F /* Hitman.swift in Sources */,
+				DCDD9907259D24E200749E7F /* Bow.swift in Sources */,
+				DCDC627A259CC602002B6D0C /* Player.swift in Sources */,
+				DCDD990A259D250F00749E7F /* Encyclopedia.swift in Sources */,
+				DC4C9F0A25A7395D00EC643C /* Hammer.swift in Sources */,
+				DCECA8B9259CC1140011BA79 /* Gun.swift in Sources */,
+				DC764DD825911F5C00537185 /* Tools.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DC764DD125911F2900537185 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC764DD225911F2900537185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		DC764DD425911F2900537185 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DC764DD525911F2900537185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC764DC725911F2900537185 /* Build configuration list for PBXProject "FrenchGameFactory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC764DD125911F2900537185 /* Debug */,
+				DC764DD225911F2900537185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC764DD325911F2900537185 /* Build configuration list for PBXNativeTarget "FrenchGameFactory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC764DD425911F2900537185 /* Debug */,
+				DC764DD525911F2900537185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC764DC425911F2900537185 /* Project object */;
+}
