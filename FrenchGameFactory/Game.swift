@@ -9,18 +9,36 @@ import Foundation
 
 class Game {
     
+    private var playerOne: Player?
+    private var playerTwo: Player?
+    
+    private var playerTurn: Player?
+    private var playerNotTurn: Player?
+    
+    private var asAllreadyChooseMedic: Bool = false
+    
+    private var isPlayerOneTurn: Bool = true
+    
+    private var playerTurnSelectedCharacter: Character?
+    private var playerNotTurnSelectedCharacter: Character?
+    
     func intro()    {
         print("welcome to OOPSIDER")
     }
     
-    
     func chooseTeam(nameTeamMate: String) -> Character {
-        
-        print("choose Your character"
-                + "\n1. 💂‍♀️ The gunner is 80 life he has a gun 🔫, make 80 damage"
-                + "\n2. 🧑‍⚕️ The Medic is 70 life he has a encyclopedia📘, make 80 damage"
-                + "\n3. 🥷 The hitman is 50 life he has a bow 🏹, make 50 damage"
-                + "\n4. 👷‍♂️ The engineer is 90 life he has a hammer 🔨, make 60 damage")
+        if !asAllreadyChooseMedic {
+            print("choose Your character"
+                    + "\n1. 💂‍♀️ The gunner is 80 life he has a gun 🔫, make 80 damage"
+                    + "\n2. 🧑‍⚕️ The Medic is 70 life he has a encyclopedia📘, make 80 damage"
+                    + "\n3. 🥷 The hitman is 50 life he has a bow 🏹, make 50 damage"
+                    + "\n4. 👷‍♂️ The engineer is 90 life he has a hammer 🔨, make 60 damage")
+        } else {
+            print("choose Your character"
+                    + "\n1. 💂‍♀️ The gunner is 80 life he has a gun 🔫, make 80 damage"
+                    + "\n3. 🥷 The hitman is 50 life he has a bow 🏹, make 50 damage"
+                    + "\n4. 👷‍♂️ The engineer is 90 life he has a hammer 🔨, make 60 damage")
+        }
         var teamNumber = 0
         print("choose a character")
         repeat {
@@ -30,8 +48,9 @@ class Game {
                 teamNumber += 1
                 let character = Gunner(name: nameTeamMate)
                 return character
-            
-            case 2:
+                
+            case 2 where !asAllreadyChooseMedic:
+                asAllreadyChooseMedic = true
                 teamNumber += 1
                 let character = Medic(name: nameTeamMate)
                 return character
@@ -47,36 +66,174 @@ class Game {
                 return character
                 
             default:
-                print("You didn't choose a character")
+                if !asAllreadyChooseMedic && team < 1 || team > 4   {
+                    print("You didn't choose a character")
+                } else {
+                    print("Not possible to have two medics per team")
+                }
             }
         } while teamNumber < 1
-
+        
     }
     
-    func buildTeam() {
-        var arrayOfNames: [String] = [String]()
-        var arrayOfCharacter: [Character] = [Character]()
+    func buildTeam(numberofPlayer: Int) -> [Player] {
+        
+        var count = 0
+        var arrayOfPlayer: [Player]  = [Player]()
         
         repeat {
-            print("\n Player 1 -> Choose Name of your Characters \(arrayOfCharacter.count+1) : ")
-            var check: Bool = false
+            var arrayOfNames: [String] = [String]()
+            var arrayOfCharacter: [Character] = [Character]()
             
             repeat {
-                let name = Tools.shared.getInputString()
-                if !arrayOfNames.contains(name) {
-                    check = true
-                    arrayOfCharacter.append(chooseTeam(nameTeamMate: name))
-                    arrayOfNames.append(name)
-                } else {
-                    print("\(name) is already taken")
-                }
-            } while check == false
-        } while arrayOfCharacter.count != 3
-        print(arrayOfCharacter[0].type, arrayOfNames[0], arrayOfCharacter[1].type, arrayOfNames[1], arrayOfCharacter[2].type, arrayOfNames[2])
+                print("\n Player \(arrayOfPlayer.count+1) -> Choose Name of your Characters \(arrayOfCharacter.count+1) : ")
+                var check: Bool = false
+                
+                repeat {
+                    let name = Tools.shared.getInputString()
+                    if !arrayOfNames.contains(name) {
+                        check.toggle()//change state of check 
+                        arrayOfCharacter.append(chooseTeam(nameTeamMate: name))
+                        arrayOfNames.append(name)
+                    } else {
+                        print("\(name) is already taken")
+                    }
+                } while check == false
+                
+                
+            } while arrayOfCharacter.count < 3
+            if arrayOfCharacter.count == 3 {
+                count = 0
+            }
+            asAllreadyChooseMedic = false
+            print(arrayOfCharacter[0].type, arrayOfNames[0], arrayOfCharacter[1].type, arrayOfNames[1], arrayOfCharacter[2].type, arrayOfNames[2])
+            
+            let createdPlayer = Player(character: arrayOfCharacter)
+            count += 1
+            arrayOfPlayer.append(createdPlayer)
+            print(createdPlayer.printInLiveCharacter())
+        } while numberofPlayer > arrayOfPlayer.count
         
-        let PlayerOne = Player(character: arrayOfCharacter)
-        print(PlayerOne.printInLiveCharacter())
+        return arrayOfPlayer
+        
     }
     
+    func selectCharacter() {
+        //        if isPlayerOneTurn {
+        //            playerTurn = playerOne
+        //        } else {
+        //            playerTurn = playerTwo
+        //        }
+        
+        let players = buildTeam(numberofPlayer: 2)
+        
+        playerOne = players[0]
+        playerTwo = players[1]
+        
+        playerTurn = (isPlayerOneTurn) ? playerOne : playerTwo
+        playerNotTurn = (isPlayerOneTurn) ? playerTwo : playerOne
+        
+        if isPlayerOneTurn {
+            print("\n Player 1 : Choose a character")
+        } else {
+            print("\n Player 2 : Choose a character")
+        }
+        
+        playerTurn?.printInLiveCharacter()
+        print("please pick a character")
+        
+        //appel func select atack
+        selectAttacker()
+        selectEnemy()
+        
+    }
+    
+    func selectAttacker() {
+        //select your teamate
+        var index : Int = Int()
+        
+        //check optionnal
+        guard let playerTurnVerify = playerTurn else { return }
+        // /!\ index array 123 != 012
+        let indexMax: Int = playerTurnVerify.characterInLife.count - 1
+        let indexMin: Int = playerTurnVerify.characterInLife.count - (playerTurnVerify.characterInLife.count - 1) - 1
+        
+        repeat {
+        
+        //recup choix index.Tools.shared
+        index = Tools.shared.getInputInt() - 1
+            if index < indexMin || index > indexMax {
+                print("Number should be \(indexMin + 1) and \(indexMax + 1) ")
+            }
+        
+        } while index < indexMin || index > indexMax
+            
+        
+        playerTurnSelectedCharacter = playerTurnVerify.characterInLife[index]
+        print(playerTurnSelectedCharacter!.name)
+    }
+    
+    func selectEnemy() {
+        //same func as selectAttacker
+        //use var playerNotTurnSelectedCharacter
+        var index : Int = Int()
+        
+        //check optionnal
+        guard let playerTurnVerify = playerTurn else { return }
+        // /!\ index array 123 != 012
+        let indexMax: Int = playerTurnVerify.characterInLife.count - 1
+        let indexMin: Int = playerTurnVerify.characterInLife.count - (playerTurnVerify.characterInLife.count - 1) - 1
+        
+        repeat {
+        
+        //recup choix index.Tools.shared
+        index = Tools.shared.getInputInt() - 1
+            if index < indexMin || index > indexMax {
+                print("Number should be \(indexMin + 1) and \(indexMax + 1) ")
+            }
+        
+        } while index < indexMin || index > indexMax
+            
+        
+        playerNotTurnSelectedCharacter = playerTurnVerify.characterInLife[index]
+        print(playerNotTurnSelectedCharacter!.name)
+    }
+    
+    //    func selectCharacter() {
+    //        //select ally or enemy to hit or heal
+    //        print("Select an Ally or an Enemy"
+    //            + "Your teammate"
+    //            + "\n1. \(arrayOfCharacter[0].type, arrayOfNames[0])"
+    //            + "\n2. \(arrayOfCharacter[1].type, arrayOfNames[1])"
+    //            + "\n3. \(arrayOfCharacter[2].type, arrayOfNames[2])"
+    //            + "Your Enemies"
+    //            + "\n2. \(arrayOfCharacter[0].type, arrayOfNames[0])"
+    //            + "\n5. \(arrayOfCharacter[1].type, arrayOfNames[1])"
+    //            + "\n6. \(arrayOfCharacter[2].type, arrayOfNames[2])"
+    //            )
+    //
+    //        switch partyTurn {
+    //        case 1:
+    //
+    //        case 2:
+    //
+    //        case 3:
+    //
+    //
+    //        case 4:
+    //
+    //        case 5:
+    //
+    //        case 6:
+    //
+    //        default:
+    //            print("")
+    //
+    //
+    //
+    //    }
 }
+
+
+
 

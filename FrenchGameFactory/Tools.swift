@@ -9,7 +9,7 @@ import Foundation
 
 class Tools {
     
-    static let shared = Tools()
+    static let shared = Tools() //singleton (Design Pattern)
     
     //func get string in terminal
     func getInputString() -> String {
@@ -45,12 +45,12 @@ class Tools {
         ( 3 * func creer un guss)
      */
     
-    func NameYourGuss(name: String) {
-        print("please type the name of your Guss")
-        
-        //if let name = readLine() {
-            
-        }
+//    func NameYourGuss(name: String) {
+//        print("please type the name of your Guss")
+//
+//        //if let name = readLine() {
+//
+//        }
     }
     
     //func creer un guss
@@ -59,13 +59,13 @@ class Tools {
         une fois perso choisit on le nomme ( un pseudo unique)
         appel func verifier pseudo
      */
-    func createGuss() {
-        print("Choose your Guss"
-            + "\n1. 🥷 Hitman"
-            + "\n2. 💂‍♀️ Gunner"
-            + "\n3. 👷‍♂️ Engineer"
-            + "\n4. 🧑‍⚕️ Medic")
-    }
+//    func createGuss() {
+//        print("Choose your Guss"
+//            + "\n1. 🥷 Hitman"
+//            + "\n2. 💂‍♀️ Gunner"
+//            + "\n3. 👷‍♂️ Engineer"
+//            + "\n4. 🧑‍⚕️ Medic")
+//    }
     
     //
     
