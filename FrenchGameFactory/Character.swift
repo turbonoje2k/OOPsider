@@ -22,9 +22,24 @@ class Character {
         self.life = life
     }
     
-    //func atk
+    func attack(target: Character, player: Player) {
+        target.life -= weapon.damage
+        print("\(name) attack \(target.name) and inflicts \(weapon.damage) damages. \(target.name) has now \(target.life) PV")
+        if target.life <= 0 {
+            target.life = 0
+            print("\(target.name) is dead")
+            player.numberOfCharacterDies += 1
+            player.characterInLife.removeAll { (character) -> Bool in
+                return target.name == character.name ? true : false
+            }
+            player.characterDead.append(target)
+        }
+    }
     
-    //func heal
+    //func heal pour prochaine session
+    
+    
+   
     
     //func upLife
     

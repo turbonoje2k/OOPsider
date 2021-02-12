@@ -142,10 +142,17 @@ class Game {
         playerTurn?.printInLiveCharacter()
         print("please pick a character")
         
-        //appel func select atack
+        //call func select atack
         selectAttacker()
-        selectEnemy()
         
+        playerNotTurn?.printInLiveCharacter()
+        print("select your target")
+        selectTarget()
+        
+        guard let playerTurnSelectedCharacter = playerTurnSelectedCharacter else { return }
+        
+        // verifier cette var ac guardlet !!!
+        playerTurnSelectedCharacter.attack(target: playerNotTurnSelectedCharacter!, player: playerNotTurn!)
     }
     
     func selectAttacker() {
@@ -173,16 +180,16 @@ class Game {
         print(playerTurnSelectedCharacter!.name)
     }
     
-    func selectEnemy() {
+    func selectTarget() {
         //same func as selectAttacker
         //use var playerNotTurnSelectedCharacter
         var index : Int = Int()
         
         //check optionnal
-        guard let playerTurnVerify = playerTurn else { return }
+        guard let playerNotTurnVerify = playerNotTurn else { return }
         // /!\ index array 123 != 012
-        let indexMax: Int = playerTurnVerify.characterInLife.count - 1
-        let indexMin: Int = playerTurnVerify.characterInLife.count - (playerTurnVerify.characterInLife.count - 1) - 1
+        let indexMax: Int = playerNotTurnVerify.characterInLife.count - 1
+        let indexMin: Int = playerNotTurnVerify.characterInLife.count - (playerNotTurnVerify.characterInLife.count - 1) - 1
         
         repeat {
         
@@ -195,9 +202,29 @@ class Game {
         } while index < indexMin || index > indexMax
             
         
-        playerNotTurnSelectedCharacter = playerTurnVerify.characterInLife[index]
+        playerNotTurnSelectedCharacter = playerNotTurnVerify.characterInLife[index]
         print(playerNotTurnSelectedCharacter!.name)
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     //    func selectCharacter() {
     //        //select ally or enemy to hit or heal
