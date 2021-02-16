@@ -15,7 +15,6 @@ class Player {
     
     init(character: [Character]) {
         //use foreach to append array of character in life
-        print("yo")
         print(character[0])
         character.forEach { (character) in
             characterInLife.append(character)

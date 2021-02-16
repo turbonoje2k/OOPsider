@@ -85,12 +85,12 @@
 			children = (
 				DCDC6277259CC58C002B6D0C /* Characters */,
 				DCECA8BB259CC1880011BA79 /* Weapons */,
-				DC764DCF25911F2900537185 /* main.swift */,
 				DC4C9F0625A71EAC00EC643C /* Game.swift */,
 				DC764DD725911F5C00537185 /* Tools.swift */,
 				DCDC6279259CC602002B6D0C /* Player.swift */,
 				DC764DDA2591247F00537185 /* Character.swift */,
 				DCECA8B2259C72AC0011BA79 /* Weapon.swift */,
+				DC764DCF25911F2900537185 /* main.swift */,
 			);
 			path = FrenchGameFactory;
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					DC764DCB25911F2900537185 = {
 						CreatedOnToolsVersion = 12.3;
