@@ -37,3 +37,4 @@ class Tools {
        return strDataInt
     
     }
+}
