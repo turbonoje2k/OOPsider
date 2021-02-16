@@ -96,7 +96,7 @@ class Game {
                         arrayOfCharacter.append(chooseTeam(nameTeamMate: name))
                         arrayOfNames.append(name)
                     } else {
-                        print("\(name) is already taken")
+                        print("❌\(name) is already taken⁉️")
                     }
                 } while check == false
                 
@@ -140,13 +140,13 @@ class Game {
         }
         
         playerTurn?.printInLiveCharacter()
-        print("please pick a character")
+        print("Select your Warrior ")
         
         //call func select atack
         selectAttacker()
         
         playerNotTurn?.printInLiveCharacter()
-        print("select your target")
+        print("select your target 🎯")
         selectTarget()
         
         guard let playerTurnSelectedCharacter = playerTurnSelectedCharacter else { return }
