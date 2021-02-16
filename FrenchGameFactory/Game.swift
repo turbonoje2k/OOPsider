@@ -9,6 +9,7 @@ import Foundation
 
 class Game {
     
+
     private var playerOne: Player?
     private var playerTwo: Player?
     
@@ -21,6 +22,9 @@ class Game {
     
     private var playerTurnSelectedCharacter: Character?
     private var playerNotTurnSelectedCharacter: Character?
+
+    //static let shared = Game()
+
     
     func intro()    {
         print("welcome to OOPSIDER")
