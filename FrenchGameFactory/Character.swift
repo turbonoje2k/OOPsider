@@ -22,7 +22,7 @@ class Character {
         self.life = life
     }
     
-    //fucn fight your ennemy
+    //func fight your ennemy
     func attack(target: Character, player: Player) {
         target.life -= weapon.damage
         print("\(name) attack \(target.name) and inflicts \(weapon.damage) damages. \(target.name) has now \(target.life) PV")
@@ -38,14 +38,8 @@ class Character {
     }
     
     //func heal your ally
-    func heal(target: Character, player: Player) {
-        target.life += weapon.damage
+    func heal(target: Character) {
+        target.life -= weapon.damage
         print("\(name) heal \(target.name) and give \(weapon.damage) PV. to \(target.name) has now \(target.life) PV")
     }
-    
-   
-    
-    //func upLife
-    
-    //func dgt
 }

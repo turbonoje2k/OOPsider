@@ -143,26 +143,57 @@ class Game {
         playerTurn = (isPlayerOneTurn) ? playerOne : playerTwo
         playerNotTurn = (isPlayerOneTurn) ? playerTwo : playerOne
         
+        guard let playerTurn = playerTurn else { return }
+        guard let playerNotTurn = playerNotTurn else { return }
+        
         if isPlayerOneTurn {
             print("\n Player 1 : Choose a character")
         } else {
             print("\n Player 2 : Choose a character")
         }
         
-        playerTurn?.printInLiveCharacter()
+        playerTurn.printInLiveCharacter()
         print("Select your Warrior 🥊 ")
         
         //call func select atack
         selectAttacker()
         
-        playerNotTurn?.printInLiveCharacter()
-        print("select your target 🎯")
-        selectTarget()
         
+              
         guard let playerTurnSelectedCharacter = playerTurnSelectedCharacter else { return }
         
+        if playerTurnSelectedCharacter.type != "🧑‍⚕️ Medic" {
+            print("select your target 🎯")
+            selectTarget()
+            playerNotTurn.printInLiveCharacter()
+            playerTurnSelectedCharacter.attack(target: playerNotTurnSelectedCharacter!, player: playerNotTurn)
+        } else {
+//            selectAttacker()
+//            playerTurn?.printInLiveCharacter()
+//            playerTurnSelectedCharacter.heal(target: )
+            var index : Int = Int()
+    
+            let indexMax: Int =  playerTurn.characterInLife.count - 1
+            let indexMin: Int =  playerTurn.characterInLife.count - ( playerTurn.characterInLife.count - 1) - 1
+            
+            print("wich character you want to heal")
+            playerTurn.printInLiveCharacter()
+            
+            repeat {
+            
+            //get choice index.Tools.shared
+            index = Tools.shared.getInputInt() - 1
+                if index < indexMin || index > indexMax {
+                    print("Number should be \(indexMin + 1) and \(indexMax + 1) ")
+                }
+            
+            } while index < indexMin || index > indexMax
+                
+            playerTurnSelectedCharacter.heal(target: playerTurn.characterInLife[index])
+        }
+        
         // check var wth guard let
-        playerTurnSelectedCharacter.attack(target: playerNotTurnSelectedCharacter!, player: playerNotTurn!)
+//
         //guard let playerNotTurnSelecedCharacter
     }
     
@@ -186,7 +217,6 @@ class Game {
         
         } while index < indexMin || index > indexMax
             
-        
         playerTurnSelectedCharacter = playerTurnVerify.characterInLife[index]
         print(playerTurnSelectedCharacter!.name)
     }
