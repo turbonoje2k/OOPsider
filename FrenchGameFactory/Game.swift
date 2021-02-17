@@ -25,11 +25,17 @@ class Game {
 
     //static let shared = Game()
 
-    
     func intro()    {
-        print("welcome to OOPSIDER")
+        print("Welcome to "
+                + "\n _______  _______  _______  _______  ___   ______   _______  ______"
+                + "\n|       ||       ||       ||       ||   | |      | |       ||    _ |"
+                + "\n|   _   ||   _   ||    _  ||  _____||   | |  _    ||    ___||   | ||"
+                + "\n|  | |  ||  | |  ||   |_| || |_____ |   | | | |   ||   |___ |   |_||_"
+                + "\n|  |_|  ||  |_|  ||    ___||_____  ||   | | |_|   ||    ___||    __  |"
+                + "\n|       ||       ||   |     _____| ||   | |       ||   |___ |   |  | |"
+                + "\n|_______||_______||___|    |_______||___| |______| |_______||___|  |_|")
     }
-    
+   
     func chooseTeam(nameTeamMate: String) -> Character {
         if !asAllreadyChooseMedic {
             print("choose Your character"
