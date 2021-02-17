@@ -1,4 +1,3 @@
-OOPSIDER                                          
 
 let try the Oriented Object Programming with Swift.
 
