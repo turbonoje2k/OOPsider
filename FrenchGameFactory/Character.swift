@@ -22,7 +22,7 @@ class Character {
         self.life = life
     }
     
-    //fight your ennemy
+    //fucn fight your ennemy
     func attack(target: Character, player: Player) {
         target.life -= weapon.damage
         print("\(name) attack \(target.name) and inflicts \(weapon.damage) damages. \(target.name) has now \(target.life) PV")

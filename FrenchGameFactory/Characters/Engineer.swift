@@ -8,11 +8,11 @@
 import Foundation
 
 class Engineer: Character {
-    static let type = "Engineer"
+    static let type = "👷‍♂️ Engineer"
     static let life = 90
     static let weapon = Hammer()
  
     init(name: String) {
-        super.init(type: "Engineer", name: name, weapon: Hammer(), life: 90)
+        super.init(type: "👷‍♂️ Engineer", name: name, weapon: Hammer(), life: 90)
     }
 }

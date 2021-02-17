@@ -8,11 +8,11 @@
 import Foundation
 
 class Hitman: Character {
-    static let type = "Hitman"
+    static let type = "🥷 Hitman"
     static let life = 50
     static let weapon = Bow()
  
     init(name: String) {
-        super.init(type: "Hitman", name: name, weapon: Bow(), life: 50)
+        super.init(type: "🥷 Hitman", name: name, weapon: Bow(), life: 50)
     }
 }

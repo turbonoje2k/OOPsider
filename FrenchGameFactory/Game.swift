@@ -34,7 +34,7 @@ class Game {
         if !asAllreadyChooseMedic {
             print("choose Your character"
                     + "\n1. 💂‍♀️ The gunner is 80 life he has a gun 🔫, make 80 damage"
-                    + "\n2. 🧑‍⚕️ The Medic is 70 life he has a encyclopedia📘, make 80 damage or heal"
+                    + "\n2. 🧑‍⚕️ The Medic is 70 life he has a encyclopedia📚, make 80 damage or heal"
                     + "\n3. 🥷 The hitman is 50 life he has a bow 🏹, make 50 damage"
                     + "\n4. 👷‍♂️ The engineer is 90 life he has a hammer 🔨, make 60 damage")
         } else {
@@ -80,7 +80,7 @@ class Game {
         
     }
     
-    func buildTeam(numberofPlayer: Int) -> [Player] {
+    func buildTeam(numberOfPlayer: Int) -> [Player] {
         
         var count = 0
         var arrayOfPlayer: [Player]  = [Player]()
@@ -116,7 +116,7 @@ class Game {
             count += 1
             arrayOfPlayer.append(createdPlayer)
             print(createdPlayer.printInLiveCharacter())
-        } while numberofPlayer > arrayOfPlayer.count
+        } while numberOfPlayer > arrayOfPlayer.count
         
         return arrayOfPlayer
         
@@ -129,7 +129,7 @@ class Game {
         //            playerTurn = playerTwo
         //        }
         
-        let players = buildTeam(numberofPlayer: 2)
+        let players = buildTeam(numberOfPlayer: 2)
         
         playerOne = players[0]
         playerTwo = players[1]
@@ -144,7 +144,7 @@ class Game {
         }
         
         playerTurn?.printInLiveCharacter()
-        print("Select your Warrior ")
+        print("Select your Warrior 🥊 ")
         
         //call func select atack
         selectAttacker()
@@ -155,7 +155,7 @@ class Game {
         
         guard let playerTurnSelectedCharacter = playerTurnSelectedCharacter else { return }
         
-        // verifier cette var ac guardlet !!!
+        // check var wth guard let
         playerTurnSelectedCharacter.attack(target: playerNotTurnSelectedCharacter!, player: playerNotTurn!)
         //guard let playerNotTurnSelecedCharacter
     }
@@ -172,7 +172,7 @@ class Game {
         
         repeat {
         
-        //recup choix index.Tools.shared
+        //get choice index.Tools.shared
         index = Tools.shared.getInputInt() - 1
             if index < indexMin || index > indexMax {
                 print("Number should be \(indexMin + 1) and \(indexMax + 1) ")
@@ -211,6 +211,10 @@ class Game {
         print(playerNotTurnSelectedCharacter!.name)
     }
     
+//    func chooseAlly() {
+//        <#function body#>
+//    }
+}
     
     
     
@@ -264,7 +268,7 @@ class Game {
     //
     //
     //    }
-}
+
 
 
 
