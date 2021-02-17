@@ -40,10 +40,12 @@ class Tools {
     
     }
     
+    //func + 1 to Round
     func increaseTurn() {
         numberRound += 1
     }
     
+    //Print the number of round
     func RoundCount() {
         print("the game was \(numberRound) Rounds")
     }

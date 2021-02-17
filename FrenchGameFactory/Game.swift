@@ -169,12 +169,12 @@ class Game {
         
         if playerTurnSelectedCharacter.type != "🧑‍⚕️ Medic" {
             print("select your target 🎯")
-            selectTarget()
             playerNotTurn.printInLiveCharacter()
+            selectTarget()
             playerTurnSelectedCharacter.attack(target: playerNotTurnSelectedCharacter!, player: playerNotTurn)
         } else {
 //            selectAttacker()
-//            playerTurn?.printInLiveCharacter()
+            playerTurn.printInLiveCharacter()
 //            playerTurnSelectedCharacter.heal(target: )
             var index : Int = Int()
     

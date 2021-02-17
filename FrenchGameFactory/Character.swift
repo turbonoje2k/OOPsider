@@ -8,7 +8,8 @@
 import Foundation
 
 class Character {
-    //each guss share properties and methode from
+    
+    //each objets from Character share properties and methode from
     let type: String
     let name: String
     var life: Int

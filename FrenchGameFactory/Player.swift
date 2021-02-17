@@ -8,7 +8,7 @@
 import Foundation
 
 class Player {
-    
+    //each Player is represented by a arry of character in live and a array of dead character
     var characterInLife: [Character] = [Character]()
     var characterDead: [Character] = [Character]()
     var numberOfCharacterDies: Int = 0
