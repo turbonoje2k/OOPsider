@@ -9,22 +9,26 @@ import Foundation
 
 class Game {
     
-
+    //var to stock a Player
     private var playerOne: Player?
     private var playerTwo: Player?
     
+    //var to know which player play
     private var playerTurn: Player?
     private var playerNotTurn: Player?
     
+    //only One medic per team in One Var
     private var asAllreadyChooseMedic: Bool = false
     
+    //var to know wich player One or Two play
     private var isPlayerOneTurn: Bool = true
     
+    //array to stock character of player turn and not turn
     private var playerTurnSelectedCharacter: Character?
     private var playerNotTurnSelectedCharacter: Character?
 
-    //static let shared = Game()
-
+    
+    //Make a splach screen
     func intro()    {
         print("Welcome to "
                 + "\n _______  _______  _______  _______  ___   ______   _______  ______"
@@ -36,6 +40,7 @@ class Game {
                 + "\n|_______||_______||___|    |_______||___| |______| |_______||___|  |_|")
     }
    
+    //func to select your team
     func chooseTeam(nameTeamMate: String) -> Character {
         if !asAllreadyChooseMedic {
             print("choose the type of your character"
@@ -86,6 +91,7 @@ class Game {
         
     }
     
+    
     func buildTeam(numberOfPlayer: Int) -> [Player] {
         
         var count = 0
@@ -128,17 +134,18 @@ class Game {
         
     }
     
-    func selectCharacter() {
+    func selectCharacter(isFirstTime: Bool) {
         //        if isPlayerOneTurn {
         //            playerTurn = playerOne
         //        } else {
         //            playerTurn = playerTwo
         //        }
+        if isFirstTime {
+            let players = buildTeam(numberOfPlayer: 2)
+            playerOne = players[0]
+            playerTwo = players[1]
+        }
         
-        let players = buildTeam(numberOfPlayer: 2)
-        
-        playerOne = players[0]
-        playerTwo = players[1]
         
         playerTurn = (isPlayerOneTurn) ? playerOne : playerTwo
         playerNotTurn = (isPlayerOneTurn) ? playerTwo : playerOne
@@ -157,9 +164,7 @@ class Game {
         
         //call func select atack
         selectAttacker()
-        
-        
-              
+    
         guard let playerTurnSelectedCharacter = playerTurnSelectedCharacter else { return }
         
         if playerTurnSelectedCharacter.type != "🧑‍⚕️ Medic" {
@@ -180,7 +185,6 @@ class Game {
             playerTurn.printInLiveCharacter()
             
             repeat {
-            
             //get choice index.Tools.shared
             index = Tools.shared.getInputInt() - 1
                 if index < indexMin || index > indexMax {
@@ -191,10 +195,19 @@ class Game {
                 
             playerTurnSelectedCharacter.heal(target: playerTurn.characterInLife[index])
         }
+        isPlayerOneTurn.toggle()
+        if !isPlayerOneTurn {
+            Tools.shared.increaseTurn()
+            
+        }
         
-        // check var wth guard let
-//
-        //guard let playerNotTurnSelecedCharacter
+        if !(playerTurn.numberOfCharacterDies == 3) && !(playerNotTurn.numberOfCharacterDies == 3) {
+            selectCharacter(isFirstTime: false)
+        } else {
+            print("End Of Game")
+            printStats()
+        }
+        
     }
     
     func selectAttacker() {
@@ -247,9 +260,13 @@ class Game {
         print(playerNotTurnSelectedCharacter!.name)
     }
     
-//    func chooseAlly() {
-//        <#function body#>
-//    }
+    func printStats() {
+        playerTurn?.printInLiveCharacter()
+        playerTurn?.printDeadCharacter()
+        playerNotTurn?.printInLiveCharacter()
+        playerNotTurn?.printDeadCharacter()
+        Tools.shared.RoundCount()
+    }
 }
     
     

@@ -11,6 +11,8 @@ class Tools {
     
     static let shared = Tools() //singleton (Design Pattern)
     
+    var numberRound: Int = Int()
+    
     //func get string from terminal
     func getInputString() -> String {
         print("enter The name of your OOPsider")
@@ -36,5 +38,13 @@ class Tools {
         }
        return strDataInt
     
+    }
+    
+    func increaseTurn() {
+        numberRound += 1
+    }
+    
+    func RoundCount() {
+        print("the game was \(numberRound) Rounds")
     }
 }

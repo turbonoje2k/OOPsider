@@ -24,7 +24,6 @@ let tool = Tools()
 let game = Game()
 game.intro()
 
-game.selectCharacter()
+game.selectCharacter(isFirstTime: true)
 /**print(game.chooseTeam(nameTeamMate: <#T##String#>).weapon.damage)**/
 //print(game.buildTeam(numberofPlayer: 3))
-
