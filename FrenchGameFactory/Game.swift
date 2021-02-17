@@ -38,13 +38,13 @@ class Game {
    
     func chooseTeam(nameTeamMate: String) -> Character {
         if !asAllreadyChooseMedic {
-            print("choose Your character"
+            print("choose the type of your character"
                     + "\n1. 💂‍♀️ The gunner is 80 life he has a gun 🔫, make 80 damage"
                     + "\n2. 🧑‍⚕️ The Medic is 70 life he has a encyclopedia📚, make 80 damage or heal"
                     + "\n3. 🥷 The hitman is 50 life he has a bow 🏹, make 50 damage"
                     + "\n4. 👷‍♂️ The engineer is 90 life he has a hammer 🔨, make 60 damage")
         } else {
-            print("choose Your character"
+            print("choose the type of your character"
                     + "\n1. 💂‍♀️ The gunner is 80 life he has a gun 🔫, make 80 damage"
                     + "\n3. 🥷 The hitman is 50 life he has a bow 🏹, make 50 damage"
                     + "\n4. 👷‍♂️ The engineer is 90 life he has a hammer 🔨, make 60 damage")
@@ -96,7 +96,7 @@ class Game {
             var arrayOfCharacter: [Character] = [Character]()
             
             repeat {
-                print("\n Player \(arrayOfPlayer.count+1) -> Choose Name of your Characters \(arrayOfCharacter.count+1) : ")
+                print("\n Player \(arrayOfPlayer.count+1) -> Choose the Name of your \(arrayOfCharacter.count+1) Characters ")
                 var check: Bool = false
                 
                 repeat {

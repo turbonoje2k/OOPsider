@@ -13,7 +13,7 @@ class Tools {
     
     //func get string from terminal
     func getInputString() -> String {
-        print("enter a name")
+        print("enter The name of your OOPsider")
         let str = readLine()
         //readLine create a var str, with string
         guard let name = str else {
