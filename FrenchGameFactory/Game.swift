@@ -40,7 +40,7 @@ class Game {
                 + "\n|_______||_______||___|    |_______||___| |______| |_______||___|  |_|")
     }
    
-    //func to select your team
+    //func to select your teammate
     func chooseTeam(nameTeamMate: String) -> Character {
         if !asAllreadyChooseMedic {
             print("choose the type of your character"
@@ -88,10 +88,9 @@ class Game {
                 }
             }
         } while teamNumber < 1
-        
     }
     
-    
+    //make a team, team =Player = [character]
     func buildTeam(numberOfPlayer: Int) -> [Player] {
         
         var count = 0
@@ -115,8 +114,7 @@ class Game {
                         print("❌\(name) is already taken⁉️")
                     }
                 } while check == false
-                
-                
+
             } while arrayOfCharacter.count < 3
             if arrayOfCharacter.count == 3 {
                 count = 0
@@ -131,9 +129,9 @@ class Game {
         } while numberOfPlayer > arrayOfPlayer.count
         
         return arrayOfPlayer
-        
     }
     
+    ////Whose turn
     func selectCharacter(isFirstTime: Bool) {
         //        if isPlayerOneTurn {
         //            playerTurn = playerOne
@@ -173,9 +171,9 @@ class Game {
             selectTarget()
             playerTurnSelectedCharacter.attack(target: playerNotTurnSelectedCharacter!, player: playerNotTurn)
         } else {
-//            selectAttacker()
+            //selectAttacker()
             playerTurn.printInLiveCharacter()
-//            playerTurnSelectedCharacter.heal(target: )
+            //playerTurnSelectedCharacter.heal(target: )
             var index : Int = Int()
     
             let indexMax: Int =  playerTurn.characterInLife.count - 1
@@ -210,6 +208,7 @@ class Game {
         
     }
     
+    //choose your warrior
     func selectAttacker() {
         //select your teamate
         var index : Int = Int()
@@ -234,6 +233,7 @@ class Game {
         print(playerTurnSelectedCharacter!.name)
     }
     
+    //chosse your target
     func selectTarget() {
         //same func as selectAttacker
         //use var playerNotTurnSelectedCharacter
@@ -260,6 +260,7 @@ class Game {
         print(playerNotTurnSelectedCharacter!.name)
     }
     
+    //SCORE
     func printStats() {
         playerTurn?.printInLiveCharacter()
         playerTurn?.printDeadCharacter()

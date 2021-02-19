@@ -17,6 +17,7 @@ class Tools {
     func getInputString() -> String {
         print("enter The name of your OOPsider")
         let str = readLine()
+        
         //readLine create a var str, with string
         guard let name = str else {
         //check if is String with guard let
@@ -33,8 +34,8 @@ class Tools {
         let str =  readLine()
         
         guard let strData = str, let strDataInt = Int(strData) else {
-            
             return -1
+            
         }
        return strDataInt
     

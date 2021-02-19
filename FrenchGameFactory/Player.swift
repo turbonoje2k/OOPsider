@@ -21,13 +21,13 @@ class Player {
         }
         
     }
-    //create func to stock characters in live in array
+    //create func to print characters in live in array
     func printInLiveCharacter() {
         characterInLife.enumerated().forEach { (index, character) in
             print("\(index + 1): \(character.name) \(character.type) \(character.life) HP - (\(character.weapon.damage) WP)")
         }
     }
-    //create a func to stock dead characters in a array
+    //create a func to print dead character
     func printDeadCharacter() {
         characterDead.enumerated().forEach { (index, character) in
             print("\(index + 1): \(character.name) (\(character.type) \(character.life) HP - (\(character.weapon.damage) WP)")

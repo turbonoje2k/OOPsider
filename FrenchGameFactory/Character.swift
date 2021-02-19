@@ -15,7 +15,7 @@ class Character {
     var life: Int
     var weapon: Weapon
     
-    //init each character as object from Character with parameters, and properties
+    //init each character as object from Character with all properties
     init(type: String, name: String, weapon: Weapon, life: Int) {
         self.type = type
         self.name = name
@@ -25,8 +25,10 @@ class Character {
     
     //func fight your ennemy
     func attack(target: Character, player: Player) {
+        //damage on target = weapon damage
         target.life -= weapon.damage
         print("\(name) attack \(target.name) and inflicts \(weapon.damage) damages. \(target.name) has now \(target.life) PV")
+        // if death = death
         if target.life <= 0 {
             target.life = 0
             print("\(target.name) is dead")
