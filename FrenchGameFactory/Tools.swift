@@ -25,7 +25,6 @@ class Tools {
         }
         print("Hello, \(name)!")
         return name
-    
     }
     
     //func get Int in terminal
@@ -38,7 +37,6 @@ class Tools {
             
         }
        return strDataInt
-    
     }
     
     //func + 1 to Round

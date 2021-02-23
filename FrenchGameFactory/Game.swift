@@ -9,6 +9,7 @@ import Foundation
 
 class Game {
     
+    //MARK: class VAR
     //var to stock a Player
     private var playerOne: Player?
     private var playerTwo: Player?
@@ -27,7 +28,7 @@ class Game {
     private var playerTurnSelectedCharacter: Character?
     private var playerNotTurnSelectedCharacter: Character?
 
-    
+    //MARK: SPLASH SCREEN
     //Make a splach screen
     func intro()    {
         print("Welcome to "
@@ -40,6 +41,7 @@ class Game {
                 + "\n|_______||_______||___|    |_______||___| |______| |_______||___|  |_|")
     }
    
+    //MARK: TEAMATES
     //func to select your teammate
     func chooseTeam(nameTeamMate: String) -> Character {
         if !asAllreadyChooseMedic {
@@ -90,6 +92,7 @@ class Game {
         } while teamNumber < 1
     }
     
+    //MARK: TEAM
     //make a team, team =Player = [character]
     func buildTeam(numberOfPlayer: Int) -> [Player] {
         
@@ -131,6 +134,7 @@ class Game {
         return arrayOfPlayer
     }
     
+    //MARK: TURN by TURN
     ////Whose turn
     func selectCharacter(isFirstTime: Bool) {
         //        if isPlayerOneTurn {
@@ -188,15 +192,12 @@ class Game {
                 if index < indexMin || index > indexMax {
                     print("Number should be \(indexMin + 1) and \(indexMax + 1) ")
                 }
-            
             } while index < indexMin || index > indexMax
-                
             playerTurnSelectedCharacter.heal(target: playerTurn.characterInLife[index])
         }
         isPlayerOneTurn.toggle()
         if !isPlayerOneTurn {
             Tools.shared.increaseTurn()
-            
         }
         
         if !(playerTurn.numberOfCharacterDies == 3) && !(playerNotTurn.numberOfCharacterDies == 3) {
@@ -205,9 +206,9 @@ class Game {
             print("End Of Game")
             printStats()
         }
-        
     }
     
+    //MARK: WARRIOR
     //choose your warrior
     func selectAttacker() {
         //select your teamate
@@ -231,8 +232,10 @@ class Game {
             
         playerTurnSelectedCharacter = playerTurnVerify.characterInLife[index]
         print(playerTurnSelectedCharacter!.name)
+        //randomBonusWeapon
     }
     
+    //MARK: TARGET
     //chosse your target
     func selectTarget() {
         //same func as selectAttacker
@@ -260,7 +263,19 @@ class Game {
         print(playerNotTurnSelectedCharacter!.name)
     }
     
-    //SCORE
+    //MARK: BONUS
+    //TODO: func Bonus weapon
+    func randomBonusWeapon() -> Bool {
+        // create un random number
+        let number = Int.random(in: 0..<10)
+        
+        // if number is Impair = bonus weapon
+        if number % 2 == 0 {
+            print("you win a bonus damge")
+            //weapon.damage += 50
+        }
+    
+    //MARK: STATS
     func printStats() {
         playerTurn?.printInLiveCharacter()
         playerTurn?.printDeadCharacter()
@@ -269,25 +284,6 @@ class Game {
         Tools.shared.RoundCount()
     }
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     //    func selectCharacter() {
     //        //select ally or enemy to hit or heal
@@ -321,9 +317,4 @@ class Game {
     //
     //
     //
-    //    }
-
-
-
-
-
+}
