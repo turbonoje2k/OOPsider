@@ -27,6 +27,9 @@ class Game {
     //array to stock character of player turn and not turn
     private var playerTurnSelectedCharacter: Character?
     private var playerNotTurnSelectedCharacter: Character?
+    
+    //var for getchoice
+    //private var index: Int = Int
 
     //MARK: SPLASH SCREEN
     //Make a splach screen
@@ -221,7 +224,6 @@ class Game {
         let indexMin: Int = playerTurnVerify.characterInLife.count - (playerTurnVerify.characterInLife.count - 1) - 1
         
         repeat {
-        
         //get choice index.Tools.shared
         index = Tools.shared.getInputInt() - 1
             if index < indexMin || index > indexMax {
@@ -232,7 +234,7 @@ class Game {
             
         playerTurnSelectedCharacter = playerTurnVerify.characterInLife[index]
         print(playerTurnSelectedCharacter!.name)
-        //randomBonusWeapon
+        randomBonusWeapon()
     }
     
     //MARK: TARGET
@@ -250,7 +252,7 @@ class Game {
         
         repeat {
         
-        //recup choix index.Tools.shared
+        //get choice index.Tools.shared
         index = Tools.shared.getInputInt() - 1
             if index < indexMin || index > indexMax {
                 print("Number should be \(indexMin + 1) and \(indexMax + 1) ")
@@ -263,9 +265,23 @@ class Game {
         print(playerNotTurnSelectedCharacter!.name)
     }
     
+    //MARK: CHOICE
+    //TODO: refecto get choice in "select target", "select attacker", "select attacker".
+//    func getChoice(<#parameters#>) -> <#return type#> {
+//        repeat {
+//
+//        //get choice index.Tools.shared
+//        index = Tools.shared.getInputInt() - 1
+//            if index < indexMin || index > indexMax {
+//                print("Number should be \(indexMin + 1) and \(indexMax + 1) ")
+//            }
+//
+//        } while index < indexMin || index > indexMax
+//    }
+    
     //MARK: BONUS
     //TODO: func Bonus weapon
-    func randomBonusWeapon() -> Bool {
+    func randomBonusWeapon() {
         // create un random number
         let number = Int.random(in: 0..<10)
         
@@ -273,48 +289,20 @@ class Game {
         if number % 2 == 0 {
             print("you win a bonus damge")
             //weapon.damage += 50
+        } else {
+            print("no bonus")
         }
+    }
     
     //MARK: STATS
     func printStats() {
+        print("the winners")
         playerTurn?.printInLiveCharacter()
         playerTurn?.printDeadCharacter()
+        print("the loosers")
         playerNotTurn?.printInLiveCharacter()
         playerNotTurn?.printDeadCharacter()
+        print("Total Rounds :")
         Tools.shared.RoundCount()
     }
-}
-    
-    //    func selectCharacter() {
-    //        //select ally or enemy to hit or heal
-    //        print("Select an Ally or an Enemy"
-    //            + "Your teammate"
-    //            + "\n1. \(arrayOfCharacter[0].type, arrayOfNames[0])"
-    //            + "\n2. \(arrayOfCharacter[1].type, arrayOfNames[1])"
-    //            + "\n3. \(arrayOfCharacter[2].type, arrayOfNames[2])"
-    //            + "Your Enemies"
-    //            + "\n2. \(arrayOfCharacter[0].type, arrayOfNames[0])"
-    //            + "\n5. \(arrayOfCharacter[1].type, arrayOfNames[1])"
-    //            + "\n6. \(arrayOfCharacter[2].type, arrayOfNames[2])"
-    //            )
-    //
-    //        switch partyTurn {
-    //        case 1:
-    //
-    //        case 2:
-    //
-    //        case 3:
-    //
-    //
-    //        case 4:
-    //
-    //        case 5:
-    //
-    //        case 6:
-    //
-    //        default:
-    //            print("")
-    //
-    //
-    //
 }
