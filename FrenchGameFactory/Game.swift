@@ -31,7 +31,7 @@ class Game {
     //var for getchoice
     //private var index: Int = Int
 
-    //MARK: SPLASH SCREEN
+    //MARK: INTRO
     //Make a splach screen
     func intro()    {
         print("Welcome to "
@@ -50,7 +50,7 @@ class Game {
         if !asAllreadyChooseMedic {
             print("choose the type of your character"
                     + "\n1. 💂‍♀️ The gunner is 80 life he has a gun 🔫, make 80 damage"
-                    + "\n2. 🧑‍⚕️ The Medic is 70 life he has a encyclopedia📚, make 80 damage or heal"
+                    + "\n2. 🧑‍⚕️ The Medic is 70 life he has a encyclopedia📚, heal + 30 HP"
                     + "\n3. 🥷 The hitman is 50 life he has a bow 🏹, make 50 damage"
                     + "\n4. 👷‍♂️ The engineer is 90 life he has a hammer 🔨, make 60 damage")
         } else {
@@ -140,11 +140,7 @@ class Game {
     //MARK: TURN by TURN
     ////Whose turn
     func selectCharacter(isFirstTime: Bool) {
-        //        if isPlayerOneTurn {
-        //            playerTurn = playerOne
-        //        } else {
-        //            playerTurn = playerTwo
-        //        }
+    
         if isFirstTime {
             let players = buildTeam(numberOfPlayer: 2)
             playerOne = players[0]
@@ -167,7 +163,7 @@ class Game {
         playerTurn.printInLiveCharacter()
         print("Select your Warrior 🥊 ")
         
-        //call func select atack
+        
         selectAttacker()
     
         guard let playerTurnSelectedCharacter = playerTurnSelectedCharacter else { return }
@@ -178,9 +174,8 @@ class Game {
             selectTarget()
             playerTurnSelectedCharacter.attack(target: playerNotTurnSelectedCharacter!, player: playerNotTurn)
         } else {
-            //selectAttacker()
             playerTurn.printInLiveCharacter()
-            //playerTurnSelectedCharacter.heal(target: )
+            
             var index : Int = Int()
     
             let indexMax: Int =  playerTurn.characterInLife.count - 1
@@ -206,7 +201,6 @@ class Game {
         if !(playerTurn.numberOfCharacterDies == 3) && !(playerNotTurn.numberOfCharacterDies == 3) {
             selectCharacter(isFirstTime: false)
         } else {
-            print("End Of Game")
             printStats()
         }
     }
@@ -214,8 +208,9 @@ class Game {
     //MARK: WARRIOR
     //choose your warrior
     func selectAttacker() {
+        
         //select your teamate
-        var index : Int = Int()
+        var index: Int = Int()
         
         //check optionnal
         guard let playerTurnVerify = playerTurn else { return }
@@ -224,7 +219,7 @@ class Game {
         let indexMin: Int = playerTurnVerify.characterInLife.count - (playerTurnVerify.characterInLife.count - 1) - 1
         
         repeat {
-        //get choice index.Tools.shared
+        //get choice index : Tools.shared
         index = Tools.shared.getInputInt() - 1
             if index < indexMin || index > indexMax {
                 print("Number should be \(indexMin + 1) and \(indexMax + 1) ")
@@ -240,13 +235,12 @@ class Game {
     //MARK: TARGET
     //chosse your target
     func selectTarget() {
-        //same func as selectAttacker
-        //use var playerNotTurnSelectedCharacter
+        
         var index : Int = Int()
         
         //check optionnal
         guard let playerNotTurnVerify = playerNotTurn else { return }
-        // /!\ index array 123 != 012
+        // /!\ index array 012 = 123
         let indexMax: Int = playerNotTurnVerify.characterInLife.count - 1
         let indexMin: Int = playerNotTurnVerify.characterInLife.count - (playerNotTurnVerify.characterInLife.count - 1) - 1
         
@@ -265,37 +259,27 @@ class Game {
         print(playerNotTurnSelectedCharacter!.name)
     }
     
-    //MARK: CHOICE
-    //TODO: refecto get choice in "select target", "select attacker", "select attacker".
-//    func getChoice(<#parameters#>) -> <#return type#> {
-//        repeat {
-//
-//        //get choice index.Tools.shared
-//        index = Tools.shared.getInputInt() - 1
-//            if index < indexMin || index > indexMax {
-//                print("Number should be \(indexMin + 1) and \(indexMax + 1) ")
-//            }
-//
-//        } while index < indexMin || index > indexMax
-//    }
-    
     //MARK: BONUS
-    //TODO: func Bonus weapon
     func randomBonusWeapon() {
+        
+        guard let selectedCharacter = playerTurnSelectedCharacter else { return }
+        
         // create un random number
         let number = Int.random(in: 0..<10)
         
         // if number is Impair = bonus weapon
         if number % 2 == 0 {
-            print("you win a bonus damge")
-            //weapon.damage += 50
-        } else {
-            print("no bonus")
+            let weaponBonus = Weapon(name: "weaponBonus", damage: 90)
+            print("you win a bonus weapon")
+            selectedCharacter.weapon = weaponBonus
         }
     }
     
     //MARK: STATS
     func printStats() {
+        print("End Of Game")
+        //
+        isPlayerOneTurn ? print("\nPlayer 2 Wins") : print("\nPlayer One wins")
         print("the winners")
         playerTurn?.printInLiveCharacter()
         playerTurn?.printDeadCharacter()

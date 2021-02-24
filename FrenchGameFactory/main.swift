@@ -7,23 +7,12 @@
 
 import Foundation
 
+//init tool need to play
 let tool = Tools()
-//tool.getInputString()
-//tool.getInputInt()
 
-//var monPerso = Gunner(name: "hero")
-//var monPerso2 = Hitman(name: "rob")
-//var monPerso3 = Medic(name: "doc")
-
-//let characterArray = [monPerso, monPerso2, monPerso3]
-//var Player1 = Player(character: characterArray)
-//
-//Player1.printInLiveCharacter()
-
-
+//init game
 let game = Game()
+// lunch the game with commande "intro"
 game.intro()
-
+//trigger for turn by turn
 game.selectCharacter(isFirstTime: true)
-/**print(game.chooseTeam(nameTeamMate: <#T##String#>).weapon.damage)**/
-//print(game.buildTeam(numberofPlayer: 3))

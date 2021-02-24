@@ -11,6 +11,7 @@ class Tools {
     
     static let shared = Tools() //singleton (Design Pattern)
     
+    //remember how many round
     var numberRound: Int = Int()
     
     //func get string from terminal
