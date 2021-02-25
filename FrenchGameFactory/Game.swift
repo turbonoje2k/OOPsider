@@ -260,6 +260,7 @@ class Game {
     }
     
     //MARK: BONUS
+    //character can wins a bonus damage (50%)
     func randomBonusWeapon() {
         
         guard let selectedCharacter = playerTurnSelectedCharacter else { return }
