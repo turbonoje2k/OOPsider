@@ -15,8 +15,4 @@ class Medic: Character {
     init(name: String) {
         super.init(type: "🧑‍⚕️ Medic", name: name, weapon: Encyclopedia(), life: 70)
     }
-    
-//    override func heal(target: Character, player: Player) {
-//        <#code#>
-//    }
 }

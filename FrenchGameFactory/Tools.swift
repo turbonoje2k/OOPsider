@@ -11,10 +11,14 @@ class Tools {
     
     static let shared = Tools() //singleton (Design Pattern)
     
+    //remember how many round
+    var numberRound: Int = Int()
+    
     //func get string from terminal
     func getInputString() -> String {
-        print("enter a name")
+        print("enter The name of your OOPsider")
         let str = readLine()
+        
         //readLine create a var str, with string
         guard let name = str else {
         //check if is String with guard let
@@ -22,7 +26,6 @@ class Tools {
         }
         print("Hello, \(name)!")
         return name
-    
     }
     
     //func get Int in terminal
@@ -31,10 +34,19 @@ class Tools {
         let str =  readLine()
         
         guard let strData = str, let strDataInt = Int(strData) else {
-            
             return -1
+            
         }
        return strDataInt
+    }
     
+    //func + 1 to Round
+    func increaseTurn() {
+        numberRound += 1
+    }
+    
+    //Print the number of round
+    func RoundCount() {
+        print("the game was \(numberRound) Rounds")
     }
 }
