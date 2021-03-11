@@ -34,4 +34,26 @@ class Player {
             
         }
     }
+    
+    //MARK: TARGET
+    //chosse your target
+    func selectTarget() -> Character {
+        
+        var index : Int = Int()
+        // /!\ index array 012 = 123
+        let indexMax: Int = self.characterInLife.count - 1
+        let indexMin: Int = self.characterInLife.count - (self.characterInLife.count - 1) - 1
+        
+        repeat {
+        
+        //get choice index.Tools.shared
+        index = Tools.shared.getInputInt() - 1
+            if index < indexMin || index > indexMax {
+                print("Number should be \(indexMin + 1) and \(indexMax + 1) ")
+            }
+        } while index < indexMin || index > indexMax
+       return self.characterInLife[index]
+    }
 }
+
+

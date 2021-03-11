@@ -27,9 +27,6 @@ class Game {
     //array to stock character of player turn and not turn
     private var playerTurnSelectedCharacter: Character?
     private var playerNotTurnSelectedCharacter: Character?
-    
-    //var for getchoice
-    //private var index: Int = Int
 
     //MARK: INTRO
     //Make a splach screen
@@ -107,13 +104,13 @@ class Game {
             var arrayOfCharacter: [Character] = [Character]()
             
             repeat {
-                print("\n Player \(arrayOfPlayer.count+1) -> Choose the Name of your \(arrayOfCharacter.count+1) Characters ")
+                print("\n Player \(arrayOfPlayer.count+1) -> Choose the Name of your \(arrayOfCharacter.count + 1) Characters ")
                 var check: Bool = false
                 
                 repeat {
                     let name = Tools.shared.getInputString()
                     if !arrayOfNames.contains(name) {
-                        check.toggle()//change state of check 
+                        check.toggle()//change state of check
                         arrayOfCharacter.append(chooseTeam(nameTeamMate: name))
                         arrayOfNames.append(name)
                     } else {
@@ -147,7 +144,6 @@ class Game {
             playerTwo = players[1]
         }
         
-        
         playerTurn = (isPlayerOneTurn) ? playerOne : playerTwo
         playerNotTurn = (isPlayerOneTurn) ? playerTwo : playerOne
         
@@ -163,15 +159,15 @@ class Game {
         playerTurn.printInLiveCharacter()
         print("Select your Warrior 🥊 ")
         
-        
-        selectAttacker()
+        playerTurnSelectedCharacter = playerTurn.selectTarget()
+        randomBonusWeapon()
     
         guard let playerTurnSelectedCharacter = playerTurnSelectedCharacter else { return }
         
         if playerTurnSelectedCharacter.type != "🧑‍⚕️ Medic" {
             print("select your target 🎯")
             playerNotTurn.printInLiveCharacter()
-            selectTarget()
+            playerNotTurnSelectedCharacter = playerNotTurn.selectTarget()
             playerTurnSelectedCharacter.attack(target: playerNotTurnSelectedCharacter!, player: playerNotTurn)
         } else {
             playerTurn.printInLiveCharacter()
@@ -205,60 +201,6 @@ class Game {
         }
     }
     
-    //MARK: WARRIOR
-    //choose your warrior
-    func selectAttacker() {
-        
-        //select your teamate
-        var index: Int = Int()
-        
-        //check optionnal
-        guard let playerTurnVerify = playerTurn else { return }
-        // /!\ index array 123 != 012
-        let indexMax: Int = playerTurnVerify.characterInLife.count - 1
-        let indexMin: Int = playerTurnVerify.characterInLife.count - (playerTurnVerify.characterInLife.count - 1) - 1
-        
-        repeat {
-        //get choice index : Tools.shared
-        index = Tools.shared.getInputInt() - 1
-            if index < indexMin || index > indexMax {
-                print("Number should be \(indexMin + 1) and \(indexMax + 1) ")
-            }
-        
-        } while index < indexMin || index > indexMax
-            
-        playerTurnSelectedCharacter = playerTurnVerify.characterInLife[index]
-        print(playerTurnSelectedCharacter!.name)
-        randomBonusWeapon()
-    }
-    
-    //MARK: TARGET
-    //chosse your target
-    func selectTarget() {
-        
-        var index : Int = Int()
-        
-        //check optionnal
-        guard let playerNotTurnVerify = playerNotTurn else { return }
-        // /!\ index array 012 = 123
-        let indexMax: Int = playerNotTurnVerify.characterInLife.count - 1
-        let indexMin: Int = playerNotTurnVerify.characterInLife.count - (playerNotTurnVerify.characterInLife.count - 1) - 1
-        
-        repeat {
-        
-        //get choice index.Tools.shared
-        index = Tools.shared.getInputInt() - 1
-            if index < indexMin || index > indexMax {
-                print("Number should be \(indexMin + 1) and \(indexMax + 1) ")
-            }
-        
-        } while index < indexMin || index > indexMax
-            
-        
-        playerNotTurnSelectedCharacter = playerNotTurnVerify.characterInLife[index]
-        print(playerNotTurnSelectedCharacter!.name)
-    }
-    
     //MARK: BONUS
     //character can wins a bonus damage (50%)
     func randomBonusWeapon() {
@@ -279,13 +221,13 @@ class Game {
     //MARK: STATS
     func printStats() {
         print("End Of Game")
-        //
-        isPlayerOneTurn ? print("\nPlayer 2 Wins") : print("\nPlayer One wins")
+        //ternary Operator to print the winner
+        isPlayerOneTurn ? print("\nPlayer Two Wins") : print("\nPlayer One wins")
         print("the winners")
         playerTurn?.printInLiveCharacter()
+        print("the dead Winner")
         playerTurn?.printDeadCharacter()
         print("the loosers")
-        playerNotTurn?.printInLiveCharacter()
         playerNotTurn?.printDeadCharacter()
         print("Total Rounds :")
         Tools.shared.RoundCount()
