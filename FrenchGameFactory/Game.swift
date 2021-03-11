@@ -136,7 +136,7 @@ class Game {
     
     //MARK: TURN by TURN
     ////Whose turn
-    func selectCharacter(isFirstTime: Bool) {
+    func turnByTurn(isFirstTime: Bool) {
     
         if isFirstTime {
             let players = buildTeam(numberOfPlayer: 2)
@@ -195,7 +195,7 @@ class Game {
         }
         
         if !(playerTurn.numberOfCharacterDies == 3) && !(playerNotTurn.numberOfCharacterDies == 3) {
-            selectCharacter(isFirstTime: false)
+            turnByTurn(isFirstTime: false)
         } else {
             printStats()
         }

@@ -15,4 +15,4 @@ let game = Game()
 // lunch the game with commande "intro"
 game.intro()
 //trigger for turn by turn
-game.selectCharacter(isFirstTime: true)
+game.turnByTurn(isFirstTime: true)
